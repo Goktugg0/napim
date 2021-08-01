@@ -4,22 +4,29 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/napim.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
 
     <header>
-      <nav>
+      <nav class="navbar">
+        <div class="container">
+          <input type="text" placeholder="Search...">
+          <div class="search"></div>
+        </div>
+        <div class="logo"><a href="#"><img style="width:100px;height: 100px" src="/foto/mcdonalds-logo.jpg" alt="Logo"></a></div>
 
-        <div class="wrap">
-          <div class="search">
-             <input type="text" class="searchTerm" placeholder="What are you looking for?">
-             <button type="submit" class="searchButton">
-               <i class="fa fa-search"></i>
-            </button>
-          </div>
-       </div>
-      
+        <ul class="nav_links">
+          <li><a href="#">Kitaplar</a></li>
+          <li><a href="#">Tartışma</a></li>
+          <li><a href="#">Hakkında</a></li>
+        </ul>
+
+        <a class="contact" href="#"> <button>Contact</button></a>
+        
+        
+
       </nav>
     </header>
 

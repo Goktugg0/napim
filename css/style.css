@@ -1,48 +1,182 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
-body{
-  background: #f2f2f2;
-  font-family: 'Open Sans', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.search {
+html, body {
   width: 100%;
-  position: relative;
-  display: flex;
+  height: 100%;
 }
 
-.searchTerm {
-  width: 100%;
-  border: 3px solid #00B4CC;
-  border-right: none;
-  padding: 5px;
-  height: 20px;
-  border-radius: 5px 0 0 5px;
-  outline: none;
-  color: #9DBFAF;
+body {
+  background: #252525;
 }
 
-.searchTerm:focus{
-  color: #00B4CC;
-}
-
-.searchButton {
-  width: 40px;
-  height: 36px;
-  border: 1px solid #00B4CC;
-  background: #00B4CC;
-  text-align: left;
-  color: #fff;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-/*Resize the wrap to see the search bar change!*/
-.wrap{
-  width: 30%;
+.container {
   position: absolute;
-  top: 5%;
-  left: 16%;
-  transform: translate(-10%, -50%);
+  margin: auto;
+  top: 0;
+  left: 83%;
+  right: 0;
+  bottom: 85%;
+  width: 300px;
+  height: 100px;
+}
+
+.container .search {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background: crimson;
+  border-radius: 50%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  z-index: 4;
+  -webkit-box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+}
+
+.container .search:hover {
+  cursor: pointer;
+}
+
+.container .search::before {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: 22px;
+  right: 0;
+  bottom: 0;
+  left: 22px;
+  width: 12px;
+  height: 2px;
+  background: white;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.container .search::after {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: -5px;
+  right: 0;
+  bottom: 0;
+  left: -5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid white;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.container input {
+  font-family: 'Inconsolata', monospace;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  outline: none;
+  border: none;
+  background: crimson;
+  color: white;
+  text-shadow: 0 0 10px crimson;
+  padding: 0 80px 0 20px;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 0 25px 0 crimson, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 25px 0 crimson, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  opacity: 0;
+  z-index: 5;
+  font-weight: bolder;
+  letter-spacing: 0.1em;
+}
+
+.container input:hover {
+  cursor: pointer;
+}
+
+.container input:focus {
+  width: 300px;
+  opacity: 1;
+  cursor: text;
+}
+
+.container input:focus ~ .search {
+  right: -250px;
+  background: #151515;
+  z-index: 6;
+}
+
+.container input:focus ~ .search::before {
+  top: 0;
+  left: 0;
+  width: 25px;
+}
+
+.container input:focus ~ .search::after {
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 2px;
+  border: none;
+  background: white;
+  border-radius: 0%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.container input::-webkit-input-placeholder {
+  color: white;
+  opacity: 0.5;
+  font-weight: bolder;
+}
+
+.container input:-ms-input-placeholder {
+  color: white;
+  opacity: 0.5;
+  font-weight: bolder;
+}
+
+.container input::-ms-input-placeholder {
+  color: white;
+  opacity: 0.5;
+  font-weight: bolder;
+}
+
+.container input::placeholder {
+  color: white;
+  opacity: 0.5;
+  font-weight: bolder;
+}
+/*# sourceMappingURL=style.css.map */
+
+.navbar .logo {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  margin: 25px;
+  
+}
+
+.navbar {
+  top: 0px;
+  width: 100%;
+  height: 150px;
+  background-color:rgb(38, 0, 255);
 }
