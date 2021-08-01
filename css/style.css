@@ -168,12 +168,10 @@ body {
 
 .navbar .logo {
   display: inline-block;
-  width: 200px;
-  height: 200px;
-  margin: 15px;
-  margin-right: 90%;
-  padding-top: 10px;
-  padding-left: 0;
+  width: 100px;
+  height: 100px;
+  margin: 25px;
+  padding: 20px auto;
    
 }
 
@@ -183,21 +181,4 @@ body {
   height: 150px;
   background-color: blue;
   
-}
- .navbar li a button {
-  text-decoration: none;
-  display: flex;
-}
-
-header .navbar .nav_links  {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 10%;
-}
-.navbar ul li a {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  top: 0;
 }
